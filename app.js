@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const PORT = process.env.PORT || 4000;
 
 const app = express();
 
@@ -17,4 +18,4 @@ app.get("/contact", (req, res) => {
 
 app.use(express.static("media"));
 
-app.listen(4000, () => console.log("Port 4000 is listened"));
+app.listen(PORT, () => console.log("Port 4000 is listened"));
